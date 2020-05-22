@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #353436;
+}
+h1 {
+    font-weight: normal;
+    color: white;
+    position: absolute;
+}
+a {
+    cursor: pointer;
+
+    &:link {
+        color: white;
+        text-decoration: none;
+    }
+    &:visited {
+        color: white;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #e2d1a6;
+        text-decoration: none;
+    }
+    &:active {
+        color: #e2d1a6;
+        text-decoration: none;
+    }
+}
+ul {
+    list-style-type: none;
+}
+label {
+    cursor: pointer; 
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+    top: 25px;
+}
+
+.main__aperti {
+    display: flex;
+
+    &__more {
+        text-align: right;
+    }
+    div {
+        padding: 5px;
+    }
+    div:nth-child(1) {
+        background: #e2d1a6;
+    }
+    div:nth-child(2) {
+        background: #e2d1a6;
+        background: white;
+    }
+    div:nth-child(3) {
+        background: black;
+        color: white;
+    }
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    &__blocks {
+        width: 924px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        &>div {
+            width: 190px;
+        }
+    }
+    
+    div {
+        display: flex;
+    }
+}
+
