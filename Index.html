@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="style/style.scss">
 </head>
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="header__head">
             <img src="img/logo.png" alt="logo" class="header__logo">
             <h1><b>mm</b>lampadari</h1></div>
         <div></div>
@@ -20,7 +20,7 @@
                 <li><a href="#">HOME</a></li>
                 <div class="dropdownmenu">
                     <li><a href="#">AZIEND</a></li>
-                    <div class="dropdownmenu-content">
+                    <div class="dropdownmenu__content">
                         <ul>
                             <a href="#">STORIA</a>
                             <hr />
@@ -38,55 +38,84 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main">
+        <div class="slider">
+            <div class="slider__img__wrap">
+                <div class="slider__img">
+                    <img src="img/slide1.jpg" alt="">
+                    <img src="img/slide2.jpg" alt="">
+                    <img src="img/slide3.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider__dots"></div>
+        </div>
+
         <div class="main__aperti">
-            <div>
-                <h3>Stai pensando ad un progetto?</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse</p>
-                <p class="main__aperti__more">Approfondisci</p>
+            <div class="main__aperti__img">
+                <img class="main__aperti__img__button__open" src="img/open.jpg" alt="Open">
+                <img class="main__aperti__img__button__close" src="img/close.jpg" alt="Close">
             </div>
-            <div>
-                <h3>Vi aspettiamo alla fiera Eurolice</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse</p>
-                <p class="main__aperti__more">Approfondisci</p>
-            </div>
-            <div>
-                <h3>Scorpi la nuova collezione</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse</p>
-                <p class="main__aperti__more">Approfondisci</p>
+            <div class="main__aperti__text">
+                <div>
+                    <h3>Stai pensando ad un progetto?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse</p>
+                        <p class="more">Approfondisci</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Vi aspettiamo alla fiera Eurolice</h3>
+                    <div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse</p>
+                        <p class="more">Approfondisci</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Scorpi la nuova collezione</h3>
+                    <div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse</p>
+                        <p class="more">Approfondisci</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <div class="footer__blocks">
         <div>
-            <h3>LAMDAPARI MADE IN ITALY</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti repellat aperiam doloribus error quia cupiditate
-                odio et enim! Molestiae illum ad minus cum quaerat, assumenda nisi perspiciatis iste natus sed!
+            <h3>Lampadari made in Italy</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti 
+                repellat aperiam doloribus error quia cupiditateodio et enim! Molestiae 
+                illum ad minus cum quaerat, assumenda nisi perspiciatis iste natus sed!
             </p>
         </div>
         <div>
-            <h3>LAMDAPARI ARTIGIANALI</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti repellat aperiam doloribus error quia cupiditate
-                odio et enim! Molestiae illum ad minus cum quaerat, assumenda nisi perspiciatis iste natus sed!
+            <h3>Lampadari artigianali</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti 
+                repellat aperiam doloribus error quia cupiditate odio et enim! Molestiae 
+                illum ad minus cum quaerat, assumenda nisi perspiciatis iste natus sed!
             </p>
         </div>
         <div>
-            <h3>45 ANNI DI ESPERIENZA</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti repellat aperiam doloribus error quia cupiditate
-                odio et enim! Molestiae illum ad minus cum quaerat, assumenda nisi perspiciatis iste natus sed!
+            <h3>45 anni di esperienza</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti 
+                repellat aperiam doloribus error quia cupiditate odio et enim! Molestiae 
+                illum ad minus cum quaerat, assumenda nisi perspiciatis iste natus sed!
             </p>
         </div>
         <div>
-            <form>
+            <form class="form">
                 <h3>NEWSLETTER</h3>
-                <input type="text" name="Name" placeholder="Nome e Congnome" class="textinput"><br />
-                <input type="text" name="Email" placeholder="Email" class="textinput"><br />
-                <input type="checkbox" name="Checkbox1" id="acca1" class="checkboxbutton"> <span class="checkboxtext">Accansento
-                    al trattamento del dati
-                </span>
-                <br />
-                <input type="submit" name="ButtonIscriviti" value="ISCRIVIVI" class="submitinput">
+                <input type="text" placeholder="Nome e Congnome" class="form__text-input">
+                <input type="email" placeholder="Email" class="form__text-input">
+                <div class="form__checkbox">
+                    <input type="checkbox" id="acca1" class="form__checkbox__button"> 
+                    <span class="form__checkbox__text">Accansento al trattamento del dati</span>
+                </div>
+                <button type="submit" class="form__submit">ISCRIVIVI</button>
             </form>
         </div>
     </div>
@@ -115,5 +144,8 @@
             <li><a href="#">PYC</a></li>
         </ul>
     </footer>
+
+    <script src="main.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
