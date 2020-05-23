@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,40 +14,49 @@
         <div class="header__head">
             <img src="img/logo.png" alt="logo" class="header__logo">
             <h1><b>mm</b>lampadari</h1></div>
-        <div></div>
-        <nav>
+        <div class="header__register">
+            <p>Area resirvata</p>
+            <i class="fas fa-lock"></i>
+        </div>
+        <nav class="header__nav">
             <ul class="menu">
-                <li><a href="#">HOME</a></li>
-                <div class="dropdownmenu">
-                    <li><a href="#">AZIEND</a></li>
+                <li><a href="#">Home</a></li>
+                <li class="dropdownmenu">
+                    <a href="#">Aziend</a>
                     <div class="dropdownmenu__content">
                         <ul>
-                            <a href="#">STORIA</a>
+                            <li><a href="#">Storia</a></li>
                             <hr />
-                            <a href="#">MM DESIGN</a>
+                            <li><a href="#">MM disign</a></li>
                             <hr />
-                            <a href="#">DESIGNER</a>
+                            <li><a href="#">Designer</a></li>
                             <hr />
-                            <a href="#">CERTIFICAZIONI</a>
+                            <li><a href="#">Certificazioni</a></li>
                         </ul>
                     </div>
-                </div>
-                <li><a href="#">COLLEZIONE</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">CONTATTI</a></li>
+                </li>
+                <li><a href="#">Collezione</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contatti</a></li>
             </ul>
         </nav>
     </header>
+
     <main class="main">
         <div class="slider">
             <div class="slider__img__wrap">
                 <div class="slider__img">
-                    <img src="img/slide1.jpg" alt="">
-                    <img src="img/slide2.jpg" alt="">
-                    <img src="img/slide3.jpg" alt="">
+                    <img src="img/slide1.jpg" alt="Slide1">
+                    <img src="img/slide2.jpg" alt="Slide2">
+                    <img src="img/slide3.jpg" alt="Slide3">
                 </div>
             </div>
             <div class="slider__dots"></div>
+        </div>
+
+        <div class="main__text-aside">
+            <h2><i>Lamdapari contemporanei</i></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime qui doloribus esse molestias totam</p>
         </div>
 
         <div class="main__aperti">
@@ -107,15 +116,15 @@
             </p>
         </div>
         <div>
+            <h3>Newsletter</h3>
             <form class="form">
-                <h3>NEWSLETTER</h3>
-                <input type="text" placeholder="Nome e Congnome" class="form__text-input">
-                <input type="email" placeholder="Email" class="form__text-input">
+                <input type="text" placeholder="Nome e Congnome">
+                <input type="email" placeholder="Email">
                 <div class="form__checkbox">
-                    <input type="checkbox" id="acca1" class="form__checkbox__button"> 
-                    <span class="form__checkbox__text">Accansento al trattamento del dati</span>
+                    <input type="checkbox"> 
+                    <span>Accansento al trattamento del dati</span>
                 </div>
-                <button type="submit" class="form__submit">ISCRIVIVI</button>
+                <button type="submit">Iscrivivi</button>
             </form>
         </div>
     </div>
@@ -145,7 +154,43 @@
         </ul>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="slider.js"></script>
+    <div class="overlay">
+        <div class="modal">
+            <a title="Закрыть" class="modal__close"><i class="fas fa-times fa-2x"></i></a>
+            <h2>Area riservata</h2>
+            <div class="modal__boxes">
+                <div>
+                    <h3>Accedi</h3>
+                    <form action="#" class="form">
+                        <input type="text" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit">Accedi</button>
+                        <p>Password dimenticata</p>
+                    </form>
+                </div>
+                <div>
+                    <h3>Registrati</h3>
+                    <form action="#" class="form">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Congnome">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <div class="form__checkbox">
+                            <input type="checkbox">
+                            <span>Accansento al trattamento del dati</span>
+                        </div>
+                        <div class="form__checkbox">
+                            <input type="checkbox">
+                            <span>Mi iscrivo alla Newsletter</span>
+                        </div>
+                        <button type="submit">Iscrivivi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>

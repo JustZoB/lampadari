@@ -12,7 +12,6 @@ body {
 h1, h2, h3, h3, h5, h6 {
     font-family: "Playfair Display";
 }
-
 a {
     cursor: pointer;
 
@@ -33,6 +32,114 @@ a {
         text-decoration: none;
     }
 }
+ul {
+    list-style-type: none;
+}
+label {
+    cursor: pointer; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    input[type=text], input[type=email], input[type=password] {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 6px;
+        margin: 6px 0;
+
+        &::placeholder {
+            color: #8c8c8c;
+        }
+        &:nth-child(1) {
+            margin: 0 0 6px 0;
+        }
+    }
+
+    input[type=checkbox] {
+        display: flex;
+        align-items: center;
+        margin: 3px 0;
+    }
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        margin: 3px 0;
+
+        span {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 10px;
+            color: #b5b4b4;
+        }
+    }
+    button {
+        cursor: pointer;
+        text-transform: uppercase;
+        border: 0;
+        margin: 6px 0;
+        color: white;
+        font-size: 18px;
+        width: 100%;
+        background-color: black;
+        padding: 9px 0;
+    }
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    .modal {
+        position: absolute;
+        background-color: #353436;
+        border: 1px solid white;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: white;
+        width: 600px;
+
+        &__close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 10px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+        &__boxes {
+            margin: 17px 77px;
+            display: flex;
+            justify-content: space-between;
+
+            &>div {
+               width: 185px;
+            }
+            p {
+                color: #b5b4b4;
+                font-size: 12px;
+                margin: 6px 0;
+            }
+        }
+    }
+}
+
 .header {
     height: 130px;
     position: relative;
@@ -50,30 +157,56 @@ a {
             margin-left: 10px;
         }
     }
-}
-ul {
-    list-style-type: none;
-}
-label {
-    cursor: pointer; 
-}
-nav {
-    display: flex;
-    position: absolute;
-    right: 0;
-    bottom: 0;
 
-    .menu {
+    &__register {
         display: flex;
-        margin-bottom: 10px;
-    
-        li {
-            margin: 5px;
+        position: absolute;
+        font-size: 14px;
+        text-transform: uppercase;
+        right: 0;
+        top: 5px;
+        color: white;
+        cursor: pointer;
+
+        p {
+            margin-right: 10px;
         }
-        .dropdownmenu {
-            
-            &__content {
-                display: none;
+        &:hover {
+            color: #e2d1a6;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    
+        .menu {
+            display: flex;
+            padding-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        
+            li {
+                padding: 5px;
+                text-transform: uppercase;
+            }
+            .dropdownmenu {
+                position: relative;
+    
+                &__content {
+                    display: none;
+                    padding: 20px 15px 10px;
+                    background: #353436;
+                    font-size: 16px;
+                    position: absolute;
+                    z-index: 3;
+                    top: 30px;
+                    li {
+                        padding: 8px;
+                    }
+                }
             }
         }
     }
@@ -82,18 +215,64 @@ nav {
 .main {
     position: relative;
 
+    .slider {
+        &__elements {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__img__wrap {
+            position: relative;
+            overflow: hidden;
+            background-color: gray;
+            height: 670px; 
+        }
+        &__img {
+            display: flex;
+            width: 3810px;
+            margin-top: -250px;
+
+            img {
+                width: 1920px;
+                height: 1080px; 
+            }
+        }
+        &__dots {
+            position: absolute;
+            bottom: 30px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
     
+            span {
+                width: 13px;
+                height: 13px;
+                margin: 7px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 2px solid black;
+                background-color: white;
+    
+                &:hover {
+                    background-color: #e0cfa4;
+                }
+            }
+            span.active {
+                background-color: #e2d1a6;
+                cursor: default;
+            }
+        }
+    }
+
     &__aperti {
         position: absolute;
         width: 100%;
-        
         bottom: 0;
 
         &__img {
             display: flex;
             justify-content: center;
             
-
             &__button {
                 &__open {
                     cursor: pointer;
@@ -104,7 +283,6 @@ nav {
                 }
             }
         }
-
         &__text {
             display: none;
             margin: 0 25px;
@@ -147,57 +325,29 @@ nav {
                 color: white;
             }
         }
-        }
-
-        
-}
-
-.slider {
-    &__elements {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
-    &__img__wrap {
-        position: relative;
-        overflow: hidden;
-        background-color: gray;
-        height: 670px; 
-    }
-    &__img {
-        display: flex;
-        width: 3810px;
-        margin-top: -250px;
-        img {
-            width: 1920px;
-            height: 1080px; 
-        }
-    }
-
-    &__dots {
+    &__text-aside {
         position: absolute;
-        bottom: 30px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        max-width: 500px;
+        right: 0;
+        top: 50%;
+        padding: 20px 30px;
+        transform: translate(0, -50%);
+        background-color: white;
+        opacity: 0.85;
 
-        span {
-            width: 13px;
-            height: 13px;
-            margin: 7px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid black;
-            background-color: white;
-
-            &:hover {
-                background-color: #e0cfa4;
-            }
+        h2 {
+            color: #020202;
+            font-size: 30px;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
         }
-        span.active {
-            background-color: #e2d1a6;
-            cursor: default;
+
+        p {
+            font-size: 18px;
+            line-height: 24px;
         }
     }
 }
@@ -227,49 +377,6 @@ nav {
             line-height: 17.4px;
         }
     }
-
-    .form {
-        display: flex;
-        flex-direction: column;
-
-        &__text-input {
-            font-size: 14px;
-            font-weight: 300;
-            padding: 6px;
-            margin: 6px 0;
-
-            &::placeholder {
-                color: #8c8c8c;
-            }
-            &[type=text] {
-                margin: 0 0 6px 0;
-            }
-        }
-
-        &__checkbox {
-            display: flex;
-            align-items: center;
-            margin: 3px 0;
-
-            &__text {
-                margin-left: 8px;
-                font-size: 10px;
-                color: #b5b4b4;
-                display: inline-block;
-            }
-        }
-
-        &__submit {
-            cursor: pointer;
-            border: 0;
-            margin: 6px 0;
-            color: white;
-            font-size: 18px;
-            width: 100%;
-            background-color: black;
-            padding: 9px 0;
-        }
-    }
 }
 
 .footer {
@@ -283,7 +390,6 @@ nav {
     li {
         margin: 5px;
     }
-
     &__info {
         display: flex;
         font-size: 12px;
