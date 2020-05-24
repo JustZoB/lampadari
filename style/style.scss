@@ -62,11 +62,11 @@ label {
         display: flex;
         align-items: center;
         margin: 3px 0;
+        transform:scale(0.7);
     }
     &__checkbox {
         display: flex;
         align-items: center;
-        margin: 3px 0;
 
         span {
             display: inline-block;
@@ -84,7 +84,7 @@ label {
         font-size: 18px;
         width: 100%;
         background-color: black;
-        padding: 9px 0;
+        padding: 6px 0;
 
         &:hover {
             background-color: #e2d1a6;
@@ -227,9 +227,8 @@ label {
     &__nav {
         display: flex;
         position: absolute;
-        right: 0;
-        bottom: 0;
-        
+        right: 5px;
+        bottom: 5px;
 
         .menu__burger {
             color: white;
@@ -264,7 +263,7 @@ label {
             }
         
             li {
-                padding: 5px;
+                padding: 5px 12px;
                 text-transform: uppercase;
 
                 .active {
@@ -330,6 +329,7 @@ label {
             display: flex;
             justify-content: center;
             width: 100%;
+            z-index: 2;
     
             span {
                 width: 13px;
@@ -377,6 +377,10 @@ label {
             display: flex;
             margin: 0 25px;
 
+            @media (max-width: 568px) {
+                flex-direction: column;
+            }
+
             &>div {
                 display: flex;
                 flex-direction: column;
@@ -422,7 +426,7 @@ label {
         max-width: 500px;
         right: 0;
         top: 50%;
-        padding: 20px 30px;
+        padding: 20px 50px 20px 30px;
         transform: translate(0, -50%);
         background-color: white;
         opacity: 0.85;
@@ -436,6 +440,7 @@ label {
         }
 
         p {
+            max-width: 440px;
             font-size: 18px;
             line-height: 24px;
         }
@@ -489,9 +494,7 @@ label {
     margin: 15px 25px;
     white-space: nowrap;
 
-    li {
-        margin: 5px;
-    }
+    
     &__info {
         display: flex;
         font-size: 12px;
@@ -499,12 +502,24 @@ label {
         @media (max-width: 1024px) {
             flex-wrap: wrap;
         }
+
+        li {
+            margin: 3px 8px;
+        }
     }
     &__social {
         display: flex;
+
+        li {
+            margin: 3px 4px;
+        }
     }
     &__lang {
         display: flex;
         font-size: 14px;
+
+        li {
+            margin: 3px;
+        }
     }
 }
