@@ -63,3 +63,14 @@ overlay.onclick = function() {
     overlay.style.display = "none";
     document.body.style.overflowY = "unset";
 }
+
+const menu = document.querySelector(".menu");
+const menuBurgerButton = document.querySelector(".menu__burger");
+
+menuBurgerButton.onclick = function() {
+    if (menu.style.display == "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
