@@ -3,7 +3,7 @@ const sliderImages = document.querySelectorAll(".slider__img img");
 const sliderDots = document.querySelector(".slider__dots");
 
 let counter = 1;
-let size = 1980;
+let size = slider.clientWidth / 2;
 slider.style.transform = "translateX(" + (-size * counter) + "px)";
 
 let dot = `<span></span>`;

@@ -315,12 +315,22 @@ label {
         }
         &__img {
             display: flex;
-            width: 3810px;
-            margin-top: -250px;
+            width: 4800px;
+            margin-top: 0;
+
+            @media(max-width: 1920px) {
+                width: 3840px;
+                margin-top: -200px;
+            }
 
             img {
-                width: 1920px;
-                height: 1080px; 
+                width: 2400px;
+                height: 1350px;
+
+                @media(max-width: 1920px) {
+                    width: 1920px;
+                    height: 1080px;
+                }
             }
         }
         &__dots {
